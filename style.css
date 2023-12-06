@@ -1,5 +1,12 @@
+* {
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
 h1 {
     font-size: 50px;
-    font-family: 'Noto Sans JP', sans-serif;
     text-align: center;
+}
+
+p {
+    font-size: 20px;
 }
