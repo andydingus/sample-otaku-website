@@ -1,22 +1,33 @@
 * {
     /* font-family: 'Noto Sans JP', sans-serif; */
-    font-family: 'M PLUS 1', sans-serif;
-    color: #311D3F;
+    font-family: 'Noto Serif JP', serif;
 }
 
 body {
     background: #E23E57;
+    color: #311D3F;
+}
+
+h1, h2, h3, h4, h5, h6, button {
+    font-family: 'DotGothic16', sans-serif;
 }
 
 h1 {
     font-size: 50px;
     text-align: center;
-    font-family: 'DotGothic16', sans-serif;
+}
+
+h2 {
+    text-align: center;
 }
 
 p {
     font-size: 20px;
     text-align: center;
+}
+
+main {
+    margin-bottom: 50px;
 }
 
 /* Nav styles */
@@ -26,6 +37,11 @@ ul {
     padding: 0;
     overflow: hidden;
     background: #88304E;
+}
+
+.nav-div {
+    display: flex;
+    justify-content: center;
 }
 
 .nav-link {
@@ -45,6 +61,38 @@ ul {
     background: #522546;
 }
 
+.container {
+    display: flex;
+}
+
+/* Main div styles */
+.manga {
+    flex-direction: column;
+    justify-content: center;
+}
+
+.lorem {
+    flex-direction: column;
+    justify-content: center;
+}
+
+.jjk {
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Lightswitch styles */
+
+.lightswitch {
+    justify-content: center;
+}
+
+button.lightswitch {
+    background-color: #311D3F;
+    color: #E23E57;
+    font-size: 15px;
+    border-radius: 12px;
+}
 
 /* Fake ID selectors, just house color palettes */
 #colors1 {

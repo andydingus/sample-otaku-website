@@ -9,6 +9,7 @@
         @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=M+PLUS+1&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@500&display=swap');
     </style>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -16,23 +17,48 @@
 <body>
     <nav>
         <ul>
-            <li class="nav-link"><a href="">サンプルリンク</a></li>
-            <li class="nav-link"><a href="">Sample link</a></li>
-            <li class="nav-link"><a href="">サンプルリンク</a></li>
-            <li class="nav-link"><a href="">Sample link</a></li>
-            <li class="nav-link"><a href="">サンプルリンク</a></li>
+            <div class="nav-div">
+                <li class="nav-link"><a href="">サンプルリンク</a></li>
+                <li class="nav-link"><a href="">Sample link</a></li>
+                <li class="nav-link"><a href="">サンプルリンク</a></li>
+                <li class="nav-link"><a href="">Sample link</a></li>
+                <li class="nav-link"><a href="">サンプルリンク</a></li>
+            </div>
         </ul>
     </nav>
-    <h1>こんにちはサ-プ? A website for your favorite anime/manga!</h1>
-    <p>Test! I am being tested on! Look at me and admire my looks! This website is meant to be a sample anime/manga
-        themed website! For me, it's just practicing my own web design skills (and a little bit of web development).
-        Enjoy!</p>
-    <p>The best manga currently is「ダンダダン」! If you're into chaotic/weird/teenage
-        romance/aliens/yokai/whatever, it's the manga for you! Go read it! NOW!</p>
-    <p>ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキスト
-    </p>
-    <p>The latest episode of Jujutsu Kaisen came out and boy, was it a shocker! Tune in next week to see the climax of the *spoiler*...</p>
-    <button class="lightSwitch">Click me!</button>
+    <main>
+        <h1>こんにちはサ-プ? A website for your favorite anime/manga!</h1>
+        <p>Test! I am being tested on! Look at me and admire my looks! This website is meant to be a sample
+            anime/manga
+            themed website! For me, it's just practicing my own web design skills (and a little bit of web
+            development).
+            Enjoy!</p>
+
+        <div class="container">
+            <div class="container manga">
+                <h2>Best manga right now?</h2>
+                <p>The best manga currently is「ダンダダン」! If you're into chaotic/weird/teenage
+                    romance/aliens/yokai/whatever, it's the manga for you! Go read it! NOW!</p>
+            </div>
+            <div class="container lorem">
+                <h2>Lorem ipsum in Japanese!</h2>
+                <p>ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキスト
+                </p>
+            </div>
+            <div class="container jjk">
+                <h2>Jujutsu Kaisen「呪術廻戦」News!</h2>
+                <p>The latest episode of Jujutsu Kaisen came out and boy, was it a shocker! Tune in next week to see the
+                    climax
+                    of the *spoiler*...</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container lightswitch">
+            <button class="btn lightswitch">Click me!</button>
+        </div>
+    </footer>
     <script src="script.js"></script>
 </body>
 
