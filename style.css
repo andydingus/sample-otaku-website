@@ -61,6 +61,15 @@ ul {
     background: #522546;
 }
 
+/* Header logo styles */
+.logo {
+    padding: 50px;
+    /* Credit: https://life-style-s.blogspot.com/2018/11/pixel-art-background-gif.html */
+    background-image: url("images/rain.gif");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 .container {
     display: flex;
 }
