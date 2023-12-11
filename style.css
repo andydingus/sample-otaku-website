@@ -4,7 +4,7 @@
 }
 
 body {
-    background: #E23E57;
+    background: #F1ECE1;
     color: #311D3F;
 }
 
@@ -36,7 +36,7 @@ ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background: #88304E;
+    background: #311D3F;
 }
 
 .nav-div {
@@ -52,7 +52,7 @@ ul {
     display: block;
     color: white;
     text-align: center;
-    padding: 14px 16px;
+    padding: 8px 16px;
     text-decoration: none;
     font-family: 'DotGothic16', sans-serif;
 }
@@ -65,7 +65,7 @@ ul {
 .logo {
     padding: 50px;
     /* Credit: https://life-style-s.blogspot.com/2018/11/pixel-art-background-gif.html */
-    background-image: url("images/rain.gif");
+    background-image: url("images/pink.gif");
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -75,17 +75,7 @@ ul {
 }
 
 /* Main div styles */
-.manga {
-    flex-direction: column;
-    justify-content: center;
-}
-
-.lorem {
-    flex-direction: column;
-    justify-content: center;
-}
-
-.jjk {
+.article {
     flex-direction: column;
     justify-content: center;
 }
@@ -98,7 +88,7 @@ ul {
 
 button.lightswitch {
     background-color: #311D3F;
-    color: #E23E57;
+    color: #F1ECE1;
     font-size: 15px;
     border-radius: 12px;
 }
@@ -117,4 +107,13 @@ button.lightswitch {
     color: #88304E;
     color: #522546;
     color: #311D3F;
+}
+
+/* Palette from header image */
+#colors3 {
+    color: #34779B;
+    color: #F1ECE1;
+    color: #DFACC4;
+    color: #AECDED;
+    color: #AC7CB4;
 }
