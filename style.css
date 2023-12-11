@@ -68,16 +68,22 @@ ul {
     background-image: url("images/pink.gif");
     background-repeat: no-repeat;
     background-size: cover;
+    background-blend-mode: lighten;
+    background-color: rgba(255,255,255,0.2);
 }
 
 .container {
     display: flex;
+    flex-wrap:wrap;
+    justify-content: center;
+    gap: 20px;
 }
 
 /* Main div styles */
 .article {
     flex-direction: column;
     justify-content: center;
+    width: 400px;
 }
 
 /* Lightswitch styles */
