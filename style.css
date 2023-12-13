@@ -36,7 +36,6 @@ ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background: #311D3F;
 }
 
 .nav-div {
@@ -44,22 +43,51 @@ ul {
     justify-content: center;
 }
 
-.nav-link {
+/* .nav-link {
     float: left;
+} */
+
+.sakura-icon {
+    width: 40px;
+    height: auto;
+    background-image: url(images/sakura.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Flips an image horizontally */
+.flipped {
+    transform: scaleX(-1);
 }
 
 .nav-link a {
     display: block;
-    color: white;
+    color: #311D3F;
     text-align: center;
     padding: 8px 16px;
     text-decoration: none;
     font-family: 'DotGothic16', sans-serif;
 }
 
-.nav-link a:hover {
-    background: #522546;
+.nav-link, .nav-link:visited {
+    text-decoration: none;
+    color: #AC7CB4;
+    position: relative;
 }
+
+.nav-link a:hover {
+    transform: scale(1.5);
+    cursor: pointer;
+}
+
+.nav-link a {
+    transition: transform .2s;
+}
+
+.link:active {
+    color: black;
+}
+
 
 /* Header logo styles */
 .logo {
@@ -86,6 +114,34 @@ ul {
     width: 400px;
 }
 
+.article h2 {
+    transition: transform .2s;
+}
+
+/* Link styles & animations */
+
+.link, .link:visited {
+    font-family: 'DotGothic16', sans-serif;
+    text-decoration: none;
+    color: #AC7CB4;
+    position: relative;
+}
+
+
+
+.article h2:hover {
+    transform: scale(1.5);
+    cursor: pointer;
+}
+
+.link:active {
+    color: black;
+}
+
+/* Footer styles */
+.copyright {
+    font-size: 15px;
+}
 /* Lightswitch styles */
 
 .lightswitch {

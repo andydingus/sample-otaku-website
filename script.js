@@ -1,5 +1,6 @@
 // Ready to be scripted!
 const lightSwitch = document.querySelector('.btn');
+let articles = document.getElementsByClassName('container article');
 
 let lightMode = true;
 let darkMode = false;
@@ -17,3 +18,10 @@ let darkMode = false;
 //         darkMode = false;
 //     }
 // });
+
+// Using the DOM and JS to add eventListeners to all class "container article" items
+// for (let i = 0; i < articles.length; i++) {
+//     articles[i].addEventListener('mouseover', function() {
+//
+//     });
+// }
