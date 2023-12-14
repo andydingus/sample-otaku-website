@@ -31,6 +31,11 @@ main {
 }
 
 /* Nav styles */
+nav {
+    display: flex;
+    justify-content: space-between;
+}
+
 ul {
     list-style-type: none;
     margin: 0;
@@ -41,6 +46,7 @@ ul {
 .nav-div {
     display: flex;
     justify-content: center;
+    gap: 20px;
 }
 
 /* .nav-link {
@@ -76,7 +82,7 @@ ul {
 }
 
 .nav-link a:hover {
-    transform: scale(1.5);
+    transform: scale(1.25);
     cursor: pointer;
 }
 
