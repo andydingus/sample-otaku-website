@@ -4,8 +4,6 @@ const headerBanner = document.querySelector('h1.logo');
 let navLinks = document.getElementsByClassName('nav-link-text');
 let articles = document.getElementsByClassName('container article');
 
-
-
 let lightMode = true;
 let darkMode = false;
 lightSwitch.addEventListener('mouseup', function() {
@@ -14,19 +12,28 @@ lightSwitch.addEventListener('mouseup', function() {
         document.body.style.color = '#F1ECE1';
 
         // Applying the text color to the nav links
-        // !!Currently doesn't work!!
-        for (let i = 0; i < navLinks; i++) {
-            navLinks[i].style.color = 'inherit';
+        for (let i = 0, len = navLinks.length; i < len; i++) {
+            navLinks[i].style.color = 'white';
         }
 
         // Changing the banner
         headerBanner.style.backgroundImage = 'url(images/blue.gif)';
         headerBanner.style.backgroundBlendMode = 'normal';
+
         darkMode = true;
         lightMode = false;
     } else {
-        document.body.style.background = '#E23E57';
+        document.body.style.background = '#F1ECE1';
         document.body.style.color = '#311D3F';
+
+        // Applying the text color to the nav links
+        for (let i = 0, len = navLinks.length; i < len; i++) {
+            navLinks[i].style.color = '#311D3F';
+        }
+
+        // Changing the banner
+        headerBanner.style.backgroundImage = 'url(images/pink.gif)';
+        headerBanner.style.backgroundBlendMode = 'normal';
         
         lightMode = true;
         darkMode = false;

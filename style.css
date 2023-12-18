@@ -66,7 +66,7 @@ ul {
     transform: scaleX(-1);
 }
 
-.nav-link a {
+.nav-link-text {
     display: block;
     color: #311D3F;
     text-align: center;
@@ -75,11 +75,11 @@ ul {
     font-family: 'DotGothic16', sans-serif;
 }
 
-.nav-link, .nav-link:visited {
+/* .nav-link, .nav-link:visited {
     text-decoration: none;
     color: #AC7CB4;
     position: relative;
-}
+} */
 
 .nav-link a:hover {
     transform: scale(1.25);
