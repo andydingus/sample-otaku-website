@@ -37,8 +37,6 @@ lightSwitch.addEventListener('mouseup', function() {
         this.textContent = 'Light Mode';
         this.style.backgroundColor = '#F1ECE1';
         this.style.color = '#311D3F';
-        this.classList.remove('testv2')
-        this.classList.add('test');
 
         darkMode = true;
         lightMode = false;
@@ -70,8 +68,6 @@ lightSwitch.addEventListener('mouseup', function() {
         this.textContent = 'Dark Mode';
         this.style.backgroundColor = '#311D3F';
         this.style.color = '#F1ECE1';
-        this.classList.remove('test')
-        this.classList.add('testv2');
 
         lightMode = true;
         darkMode = false;
