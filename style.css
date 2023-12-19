@@ -150,10 +150,56 @@ ul {
 
 /* 'This Week's Trending Chapters!' section styles */
 .top-chapter {
-    width: 600px;
-    height: auto;
+    background-image: url(images/jjk-vol1.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 400px;
+    height: 600px;
 }
 
+.top-chapter p {
+    color: white;
+    align-self: end;
+}
+
+.chapter {
+    flex-direction: column;
+    justify-content: center;
+    width: 100px;
+    height: 600px;
+}
+
+/* Manga cover styles */
+.opm {
+    background-image: url(images/opm-vol1.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+}
+
+.op {
+    background-image: url(images/op-vol1.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.ddd {
+    background-image: url(images/ddd-vol1.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.kny {
+    background-image: url(images/kny-vol1.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.bl {
+    background-image: url(images/bl-vol1.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
 /* Footer styles */
 /* Lightswitch styles */
 
