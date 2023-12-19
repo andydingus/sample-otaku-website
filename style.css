@@ -143,7 +143,7 @@ ul {
     justify-content: center;
 }
 
-button.lightswitch {
+.btn {
     background-color: #311D3F;
     color: #F1ECE1;
     font-size: 15px;
@@ -181,4 +181,34 @@ button.lightswitch {
     color: #17A7C6;
     color: #002233;
     color: #DED687;
+}
+
+@keyframes test-animation {
+    /* from {background-color: initial; color: initial;}
+    to {background-color: #F1ECE1; color: #311D3F;}  */
+    from {background-color: #311D3F;}
+    to {background-color: #F1ECE1;}
+}
+
+@keyframes change-text-color {
+    from {color: #F1ECE1;}
+    to {color: #311D3F;}
+}
+
+@keyframes test-animation-v2 {
+    from {background-color: #F1ECE1;}
+    to {background-color: #311D3F;}
+}
+
+@keyframes change-text-color-v2 {
+    from {color: #311D3F;}
+    to {color: #F1ECE1;}
+}
+
+.test {
+    animation: test-animation 0.5s forwards, change-text-color 0.5s forwards;
+}
+
+.testv2 {
+    animation: test-animation-v2 0.5s forwards, change-text-color-v2 0.5s forwards;
 }
