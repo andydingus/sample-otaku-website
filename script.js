@@ -1,10 +1,11 @@
 // Ready to be scripted!
-const lightSwitch = document.querySelector('.btn.lightswitch');
+const lightSwitch = document.querySelector('button.lightswitch');
 const headerBanner = document.querySelector('h1.logo');
 const navIcons = document.getElementsByClassName('icon');
 const navLinks = document.getElementsByClassName('nav-link-text');
 const articles = document.getElementsByClassName('container article');
 const articleLinks = document.getElementsByClassName('article-link');
+const buttons = document.getElementsByTagName('button');
 
 let lightMode = true;
 let darkMode = false;
@@ -24,7 +25,7 @@ lightSwitch.addEventListener('mouseup', function() {
         }
 
         // Changing the banner
-        headerBanner.style.backgroundImage = 'url(images/blue.gif)';
+        headerBanner.style.backgroundImage = 'linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)), url("images/blue.gif")';
         headerBanner.style.backgroundColor = 'rgba(0,0,0,0.3)';
         headerBanner.style.backgroundBlendMode = 'darken';
         
@@ -33,10 +34,12 @@ lightSwitch.addEventListener('mouseup', function() {
             articleLinks[i].style.color = '#FF6666';
         }
 
-        // Changing the lightswitch
+        // Changing the buttons
         this.textContent = 'Light Mode';
-        this.style.backgroundColor = '#F1ECE1';
-        this.style.color = '#311D3F';
+        for (let i = 0; i < buttons.length; i++) {
+            buttons[i].style.backgroundColor = '#F1ECE1';
+            buttons[i].style.color = '#311D3F';
+        }
 
         darkMode = true;
         lightMode = false;
@@ -55,7 +58,7 @@ lightSwitch.addEventListener('mouseup', function() {
         }
 
         // Changing the banner
-        headerBanner.style.backgroundImage = 'url(images/pink.gif)';
+        headerBanner.style.backgroundImage = 'linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.7)), url("images/pink.gif")';
         headerBanner.style.backgroundColor = 'rgba(255,255,255,0.2)';
         headerBanner.style.backgroundBlendMode = 'lighten';
         
@@ -66,8 +69,10 @@ lightSwitch.addEventListener('mouseup', function() {
 
         // Changing the lightswitch
         this.textContent = 'Dark Mode';
-        this.style.backgroundColor = '#311D3F';
-        this.style.color = '#F1ECE1';
+        for (let i = 0; i < buttons.length; i++) {
+            buttons[i].style.backgroundColor = '#311D3F';
+            buttons[i].style.color = '#F1ECE1';
+        }
 
         lightMode = true;
         darkMode = false;
