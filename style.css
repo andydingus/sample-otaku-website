@@ -149,7 +149,14 @@ ul {
 }
 
 /* 'This Week's Trending Chapters!' section styles */
-.top-chapter {
+.chapter {
+    flex-direction: column;
+    justify-content: center;
+    width: 100px;
+    height: 600px;
+}
+
+.top1 {
     background-image: url(images/jjk-vol1.webp);
     background-size: cover;
     background-repeat: no-repeat;
@@ -157,16 +164,8 @@ ul {
     height: 600px;
 }
 
-.top-chapter p {
+.top1 p {
     color: white;
-    align-self: end;
-}
-
-.chapter {
-    flex-direction: column;
-    justify-content: center;
-    width: 100px;
-    height: 600px;
 }
 
 /* Manga cover styles */
