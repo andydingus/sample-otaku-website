@@ -47,6 +47,8 @@ ul {
     display: flex;
     justify-content: center;
     gap: 20px;
+    border-style: dotted;
+    border-radius: 45px;
 }
 
 /* .nav-link {
@@ -136,9 +138,7 @@ ul {
 }
 
 /* Footer styles */
-.copyright {
-    font-size: 15px;
-}
+
 /* Lightswitch styles */
 
 .lightswitch {
@@ -150,6 +150,15 @@ ul {
     color: #F1ECE1;
     font-size: 15px;
     border-radius: 12px;
+}
+
+.peko {
+    width: 250px;
+    height: auto;
+}
+
+.copyright {
+    font-size: 15px;
 }
 
 /* Fake ID selectors, just house color palettes */
