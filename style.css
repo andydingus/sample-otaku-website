@@ -154,6 +154,7 @@ ul {
     justify-content: center;
     width: 100px;
     height: 600px;
+    box-shadow: 10px -10px;
 }
 
 .top1 {
@@ -199,6 +200,12 @@ ul {
     background-size: cover;
     background-repeat: no-repeat;
 }
+
+
+/* Prototype version of what I want to happen, not exactly the end product */
+/* .chapter:hover {
+    width: 400px;
+} */
 /* Footer styles */
 /* Lightswitch styles */
 

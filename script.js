@@ -84,7 +84,13 @@ lightSwitch.addEventListener('mouseup', function () {
 // 1) On hover: any "covered" manga should be fully "shown" (change the width to what the top chapter has).
 // Top chapter should get "covered"
 // 2) After hover: top manga chapter becomes "uncovered", manga that was being hovered becomes "covered" again
-function addChapterSelect() {
+for (let i = 0; i < trendingChapters.length; i++) {
+    trendingChapters[i].addEventListener('mouseover', function () {
+        trendingChapters[i].textContent = 'I am a test sentence!';
+    });
+}
+
+function chapterSelect() {
     
 }
 
