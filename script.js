@@ -7,98 +7,116 @@ const articles = document.getElementsByClassName('container article');
 const articleLinks = document.getElementsByClassName('article-link');
 const buttons = document.getElementsByTagName('button');
 const trendingChapters = document.getElementsByClassName('chapter');
+const trendingEpisodes = document.getElementsByClassName('episode');
 
 let lightMode = true;
 let darkMode = false;
-lightSwitch.addEventListener('mouseup', function () {
-    if (!darkMode) {
-        document.body.style.background = '#00506F';
-        document.body.style.color = '#F1ECE1';
-        document.body.style.transition = 'all 1s ease-out'; // Illusion of smooth 'transition'
 
-        // Changing nav icons
-        for (let i = 0; i < navIcons.length; i++) {
-            navIcons[i].style.backgroundImage = 'url(images/streetlight.png)';
-        }
-
-        // Applying the text color to the nav links
-        for (let i = 0; i < navLinks.length; i++) {
-            navLinks[i].style.color = 'white';
-        }
-
-        // Changing the banner
-        headerBanner.style.backgroundImage = 'linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)), url("images/blue.gif")';
-        headerBanner.style.backgroundColor = 'rgba(0,0,0,0.3)';
-        headerBanner.style.backgroundBlendMode = 'darken';
-
-        // Applying the text color to the article links
-        for (let i = 0; i < articleLinks.length; i++) {
-            articleLinks[i].style.color = '#FF6666';
-        }
-
-        // Changing the buttons
-        // this.textContent = 'Light Mode';
-        this.setAttribute('src', 'images/moon.svg');
-        for (let i = 0; i < buttons.length; i++) {
-            buttons[i].style.backgroundColor = '#F1ECE1';
-            buttons[i].style.color = '#311D3F';
-            buttons[i].style.transition = 'all 1s ease-out'; // Animation
-        }
-
-        darkMode = true;
-        lightMode = false;
-    } else {
-        document.body.style.background = '#F1ECE1';
-        document.body.style.color = '#311D3F';
-
-        // Changing nav icons
-        for (let i = 0; i < navIcons.length; i++) {
-            navIcons[i].style.backgroundImage = 'url(images/sakura.png)';
-        }
-
-        // Applying the text color to the nav links
-        for (let i = 0; i < navLinks.length; i++) {
-            navLinks[i].style.color = '#311D3F';
-        }
-
-        // Changing the banner
-        headerBanner.style.backgroundImage = 'linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.7)), url("images/pink.gif")';
-        headerBanner.style.backgroundColor = 'rgba(255,255,255,0.2)';
-        headerBanner.style.backgroundBlendMode = 'lighten';
-
-        // Applying the text color to the article links
-        for (let i = 0; i < articleLinks.length; i++) {
-            articleLinks[i].style.color = '#AC7CB4';
-        }
-
-        // Changing the lightswitch
-        // this.textContent = 'Dark Mode';
-        this.setAttribute('src', 'images/sun.svg');
-        for (let i = 0; i < buttons.length; i++) {
-            buttons[i].style.backgroundColor = '#311D3F';
-            buttons[i].style.color = '#F1ECE1';
-            buttons[i].style.transition = 'all 1s ease-out';
-        }
-
-        lightMode = true;
-        darkMode = false;
-    }
-});
 
 // What is should do:
 // 1) On hover: any "covered" manga should be fully "shown" (change the width to what the top chapter has).
 // Top chapter should get "covered"
 // 2) After hover: top manga chapter becomes "uncovered", manga that was being hovered becomes "covered" again
 
-for (let i = 0; i < trendingChapters.length; i++) {
-    trendingChapters[i].addEventListener('mouseover', function () {
-        trendingChapters[i].style.width = '400px';
+function setEventListeners() {
+    lightSwitch.addEventListener('mouseup', function () {
+        if (!darkMode) {
+            document.body.style.background = '#00506F';
+            document.body.style.color = '#F1ECE1';
+            document.body.style.transition = 'all 1s ease-out'; // Illusion of smooth 'transition'
+    
+            // Changing nav icons
+            for (let i = 0; i < navIcons.length; i++) {
+                navIcons[i].style.backgroundImage = 'url(images/streetlight.png)';
+            }
+    
+            // Applying the text color to the nav links
+            for (let i = 0; i < navLinks.length; i++) {
+                navLinks[i].style.color = 'white';
+            }
+    
+            // Changing the banner
+            headerBanner.style.backgroundImage = 'linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)), url("images/blue.gif")';
+            headerBanner.style.backgroundColor = 'rgba(0,0,0,0.3)';
+            headerBanner.style.backgroundBlendMode = 'darken';
+    
+            // Applying the text color to the article links
+            for (let i = 0; i < articleLinks.length; i++) {
+                articleLinks[i].style.color = '#FF6666';
+            }
+    
+            // Changing the buttons
+            // this.textContent = 'Light Mode';
+            this.setAttribute('src', 'images/moon.svg');
+            for (let i = 0; i < buttons.length; i++) {
+                buttons[i].style.backgroundColor = '#F1ECE1';
+                buttons[i].style.color = '#311D3F';
+                buttons[i].style.transition = 'all 1s ease-out'; // Animation
+            }
+    
+            darkMode = true;
+            lightMode = false;
+        } else {
+            document.body.style.background = '#F1ECE1';
+            document.body.style.color = '#311D3F';
+    
+            // Changing nav icons
+            for (let i = 0; i < navIcons.length; i++) {
+                navIcons[i].style.backgroundImage = 'url(images/sakura.png)';
+            }
+    
+            // Applying the text color to the nav links
+            for (let i = 0; i < navLinks.length; i++) {
+                navLinks[i].style.color = '#311D3F';
+            }
+    
+            // Changing the banner
+            headerBanner.style.backgroundImage = 'linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.7)), url("images/pink.gif")';
+            headerBanner.style.backgroundColor = 'rgba(255,255,255,0.2)';
+            headerBanner.style.backgroundBlendMode = 'lighten';
+    
+            // Applying the text color to the article links
+            for (let i = 0; i < articleLinks.length; i++) {
+                articleLinks[i].style.color = '#AC7CB4';
+            }
+    
+            // Changing the lightswitch
+            // this.textContent = 'Dark Mode';
+            this.setAttribute('src', 'images/sun.svg');
+            for (let i = 0; i < buttons.length; i++) {
+                buttons[i].style.backgroundColor = '#311D3F';
+                buttons[i].style.color = '#F1ECE1';
+                buttons[i].style.transition = 'all 1s ease-out';
+            }
+    
+            lightMode = true;
+            darkMode = false;
+        }
     });
 
-    trendingChapters[i].addEventListener('mouseout', function () {
-        trendingChapters[i].style.width = '100px';
-    })
+    for (let i = 0; i < trendingChapters.length; i++) {
+        trendingChapters[i].addEventListener('mouseover', function () {
+            trendingChapters[i].style.width = '400px';
+        });
+    
+        trendingChapters[i].addEventListener('mouseout', function () {
+            trendingChapters[i].style.width = '100px';
+        })
+    }
+
+    for (let i = 0; i < trendingEpisodes.length; i++) {
+        trendingEpisodes[i].addEventListener('mouseover', function () {
+            trendingEpisodes[i].style.width = '400px';
+        });
+    
+        trendingEpisodes[i].addEventListener('mouseout', function () {
+            trendingEpisodes[i].style.width = '100px';
+        })
+    }
 }
+
+setEventListeners();
+
 
 // function chapterSelect() {
 

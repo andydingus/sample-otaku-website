@@ -165,6 +165,7 @@ ul {
 
 /* 'This Week's Trending Chapters!' section styles */
 .chapter {
+    position: relative;
     flex-direction: column;
     justify-content: center;
     width: 100px;
@@ -175,8 +176,33 @@ ul {
 }
 
 .chapter:hover {
-    translate: 0px -10px;
-    
+    translate: 0px -10px;   
+}
+
+.episode {
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    width: 100px;
+    height: 600px;
+    box-shadow: 10px -10px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+/* Thinking about doing something different for the animations on this one */
+.episode:hover { 
+    translate: 0px -10px;  
+}
+
+/* Makes a div a link */
+.link-spanner {
+    position:absolute; 
+    width:100%;
+    height:100%;
+    top:0;
+    left: 0;
+    z-index: 1;
 }
 
 /* .top1 { */
@@ -184,46 +210,59 @@ ul {
     height: 600px; */
 /* } */
 
-.jjk {
-    background-image: url(images/jjk-vol1.webp);
+.chapter, .episode {
     background-size: cover;
     background-repeat: no-repeat;
 }
 
-.top1 p {
-    color: white;
+.chapter.jjk {
+    background-image: url(images/jjk-vol1.webp);
 }
 
 /* Manga cover styles */
-.opm {
+.chapter.opm {
     background-image: url(images/opm-vol1.webp);
-    background-size: cover;
-    background-repeat: no-repeat;
-    
 }
 
-.op {
+.chapter.op {
     background-image: url(images/op-vol1.webp);
-    background-size: cover;
-    background-repeat: no-repeat;
 }
 
-.ddd {
+.chapter.ddd {
     background-image: url(images/ddd-vol1.webp);
-    background-size: cover;
-    background-repeat: no-repeat;
 }
 
-.kny {
+.chapter.kny {
     background-image: url(images/kny-vol1.webp);
-    background-size: cover;
-    background-repeat: no-repeat;
 }
 
-.bl {
+.chapter.bl {
     background-image: url(images/bl-vol1.webp);
-    background-size: cover;
-    background-repeat: no-repeat;
+}
+
+/* Anime poster styles */
+.episode.jjk {
+    background-image: url(images/jjk-s2.jpg)
+}
+
+.episode.frieren {
+    background-image: url(images/frieren-s1.png)
+}
+
+.episode.onk {
+    background-image: url(images/onk-s1.png)
+}
+
+.episode.op-wano {
+    background-image: url(images/op-wanoarc.png)
+}
+
+.episode.nier {
+    background-image: url(images/nier1.1a-s1.png)
+}
+
+.episode.bleach {
+    background-image: url(images/bleach-tybw.png)
 }
 
 
@@ -266,7 +305,7 @@ ul {
     color: #311D3F;
 }
 
-/* Palette from header image */
+/* Palettes from dark mode header image */
 #colors3 {
     color: #34779B;
     color: #F1ECE1;
