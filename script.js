@@ -14,6 +14,7 @@ lightSwitch.addEventListener('mouseup', function () {
     if (!darkMode) {
         document.body.style.background = '#00506F';
         document.body.style.color = '#F1ECE1';
+        document.body.style.transition = 'all 1s ease-out'; // Illusion of smooth 'transition'
 
         // Changing nav icons
         for (let i = 0; i < navIcons.length; i++) {
@@ -40,6 +41,7 @@ lightSwitch.addEventListener('mouseup', function () {
         for (let i = 0; i < buttons.length; i++) {
             buttons[i].style.backgroundColor = '#F1ECE1';
             buttons[i].style.color = '#311D3F';
+            buttons[i].style.transition = 'all 1s ease-out'; // Animation
         }
 
         darkMode = true;
@@ -73,6 +75,7 @@ lightSwitch.addEventListener('mouseup', function () {
         for (let i = 0; i < buttons.length; i++) {
             buttons[i].style.backgroundColor = '#311D3F';
             buttons[i].style.color = '#F1ECE1';
+            buttons[i].style.transition = 'all 1s ease-out';
         }
 
         lightMode = true;
@@ -84,15 +87,20 @@ lightSwitch.addEventListener('mouseup', function () {
 // 1) On hover: any "covered" manga should be fully "shown" (change the width to what the top chapter has).
 // Top chapter should get "covered"
 // 2) After hover: top manga chapter becomes "uncovered", manga that was being hovered becomes "covered" again
+
 for (let i = 0; i < trendingChapters.length; i++) {
     trendingChapters[i].addEventListener('mouseover', function () {
-        trendingChapters[i].textContent = 'I am a test sentence!';
+        trendingChapters[i].style.width = '400px';
     });
+
+    trendingChapters[i].addEventListener('mouseout', function () {
+        trendingChapters[i].style.width = '100px';
+    })
 }
 
-function chapterSelect() {
-    
-}
+// function chapterSelect() {
+
+// }
 
 // Icon creds:
 // Streelight: <a href="https://www.flaticon.com/free-icons/street-light" title="street light icons">Street light icons created by Freepik - Flaticon</a>;
