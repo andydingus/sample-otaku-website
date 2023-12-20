@@ -1,5 +1,5 @@
 // Ready to be scripted!
-const lightSwitch = document.querySelector('button.lightswitch');
+const lightSwitch = document.querySelector('.lightswitch');
 const headerBanner = document.querySelector('h1.logo');
 const navIcons = document.getElementsByClassName('icon');
 const navLinks = document.getElementsByClassName('nav-link-text');
@@ -37,7 +37,8 @@ lightSwitch.addEventListener('mouseup', function () {
         }
 
         // Changing the buttons
-        this.textContent = 'Light Mode';
+        // this.textContent = 'Light Mode';
+        this.setAttribute('src', 'images/moon.svg');
         for (let i = 0; i < buttons.length; i++) {
             buttons[i].style.backgroundColor = '#F1ECE1';
             buttons[i].style.color = '#311D3F';
@@ -71,7 +72,8 @@ lightSwitch.addEventListener('mouseup', function () {
         }
 
         // Changing the lightswitch
-        this.textContent = 'Dark Mode';
+        // this.textContent = 'Dark Mode';
+        this.setAttribute('src', 'images/sun.svg');
         for (let i = 0; i < buttons.length; i++) {
             buttons[i].style.backgroundColor = '#311D3F';
             buttons[i].style.color = '#F1ECE1';

@@ -76,6 +76,18 @@ ul {
     transform: scaleX(-1);
 }
 
+.banner {
+    background-image: url(images/fubuzilla.webp);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 70px;
+}
+/* Used as a test */
+/* .banner-text {
+    font-family: 'DotGothic16', sans-serif;
+    font-size: 12px;
+} */
+
 .nav-link-text {
     display: block;
     color: #311D3F;
@@ -223,7 +235,10 @@ ul {
 /* Lightswitch styles */
 
 .lightswitch {
-    justify-content: center;
+    cursor: pointer;
+    border-style: dotted;
+    border-radius: 45px;
+    padding: 10px;
 }
 
 .peko {
@@ -279,7 +294,7 @@ hr {
 }
 
 .xtra-gap {
-    gap: 40px;
+    gap: 70px;
 }
 
 .no-wrap {
