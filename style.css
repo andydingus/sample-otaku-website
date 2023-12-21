@@ -344,3 +344,15 @@ hr {
     width: 100%;
     height: auto;
 }
+
+/* Animations that play when an element is in the viewport */
+/* [data-inviewport] {
+    width:100px; height:600px;
+} */
+[data-inviewport='scale-in'] {
+    transform: scale(0.3);
+}
+
+[data-inviewport='scale-in'].is-inViewport {
+    transform: scale(1);
+}
