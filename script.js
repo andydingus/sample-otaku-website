@@ -53,7 +53,7 @@ function setEventListeners() {
             // Applying the text color to the nav links
             for (let i = 0; i < navLinks.length; i++) {
                 navLinks[i].style.color = 'white';
-                navLinks[i].style.transition = 'all 1s ease-out';
+                navLinks[i].style.transition = 'all 0.2s ease-out';
             }
 
             // Changing the banner
@@ -119,20 +119,24 @@ function setEventListeners() {
     for (let i = 0; i < trendingChapters.length; i++) {
         trendingChapters[i].addEventListener('mouseover', function () {
             trendingChapters[i].style.width = '400px';
+            trendingChapters[i].style.height = '600px';
         });
 
         trendingChapters[i].addEventListener('mouseout', function () {
             trendingChapters[i].style.width = '100px';
+            trendingChapters[i].style.height = '300px';
         })
     }
 
     for (let i = 0; i < trendingEpisodes.length; i++) {
         trendingEpisodes[i].addEventListener('mouseover', function () {
             trendingEpisodes[i].style.width = '400px';
+            trendingEpisodes[i].style.height = '600px';
         });
 
         trendingEpisodes[i].addEventListener('mouseout', function () {
             trendingEpisodes[i].style.width = '100px';
+            trendingEpisodes[i].style.height = '300px';
         })
     }
 }

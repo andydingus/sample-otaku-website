@@ -169,10 +169,10 @@ ul {
     flex-direction: column;
     justify-content: center;
     width: 100px;
-    height: 600px;
+    height: 300px;
     box-shadow: 10px -10px;
     cursor: pointer;
-    transition: all 0.5s ease;
+    transition: all 0.35s ease;
 }
 
 .chapter:hover {
@@ -187,12 +187,17 @@ ul {
     height: 600px;
     box-shadow: 10px -10px;
     cursor: pointer;
-    transition: all 0.5s ease;
+    transition: all 0.35s ease;
 }
 
 /* Thinking about doing something different for the animations on this one */
 .episode:hover { 
     translate: 0px -10px;  
+}
+
+.chapter, .episode {
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 /* Makes a div a link */
@@ -209,11 +214,6 @@ ul {
     /* width: 400px;
     height: 600px; */
 /* } */
-
-.chapter, .episode {
-    background-size: cover;
-    background-repeat: no-repeat;
-}
 
 .chapter.jjk {
     background-image: url(images/jjk-vol1.webp);
