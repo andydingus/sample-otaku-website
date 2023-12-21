@@ -184,7 +184,7 @@ ul {
     flex-direction: column;
     justify-content: center;
     width: 100px;
-    height: 600px;
+    height: 300px;
     box-shadow: 10px -10px;
     cursor: pointer;
     transition: all 0.35s ease;
