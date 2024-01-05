@@ -242,27 +242,31 @@ ul {
 
 /* Anime poster styles */
 .episode.jjk {
-    background-image: url(images/jjk-s2.jpg)
+    background-image: url(images/jjk-s2.jpg);
 }
 
 .episode.frieren {
-    background-image: url(images/frieren-s1.png)
+    background-image: url(images/frieren-s1.png);
 }
 
 .episode.onk {
-    background-image: url(images/onk-s1.png)
+    background-image: url(images/onk-s1.png);
 }
 
 .episode.op-wano {
-    background-image: url(images/op-wanoarc.png)
+    background-image: url(images/op-wanoarc.png);
 }
 
 .episode.nier {
-    background-image: url(images/nier1.1a-s1.png)
+    background-image: url(images/nier1.1a-s1.png);
+}
+
+.episode.nier:hover {
+    background-image: url(images/nier-gif.webp);
 }
 
 .episode.bleach {
-    background-image: url(images/bleach-tybw.png)
+    background-image: url(images/bleach-tybw.png);
 }
 
 
