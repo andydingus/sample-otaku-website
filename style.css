@@ -245,16 +245,32 @@ ul {
     background-image: url(images/jjk-s2.jpg);
 }
 
+.episode.jjk:hover {
+    background-image: url(images/jjk-s2-gif.webp);
+}
+
 .episode.frieren {
     background-image: url(images/frieren-s1.png);
+}
+
+.episode.frieren:hover {
+    background-image: url(images/frieren-gif.gif);
 }
 
 .episode.onk {
     background-image: url(images/onk-s1.png);
 }
 
+.episode.onk:hover {
+    background-image: url(images/onk-gif.gif);
+}
+
 .episode.op-wano {
     background-image: url(images/op-wanoarc.png);
+}
+
+.episode.op-wano:hover {
+    background-image: url(images/op-wano-gif.gif);
 }
 
 .episode.nier {
@@ -267,6 +283,10 @@ ul {
 
 .episode.bleach {
     background-image: url(images/bleach-tybw.png);
+}
+
+.episode.bleach:hover {
+    background-image: url(images/bleach-tybw-gif.gif);
 }
 
 

@@ -130,13 +130,17 @@ function setEventListeners() {
 
     for (let i = 0; i < trendingEpisodes.length; i++) {
         trendingEpisodes[i].addEventListener('mouseover', function () {
-            trendingEpisodes[i].style.width = '400px';
-            trendingEpisodes[i].style.height = '600px';
+            trendingEpisodes[i].style.width = '500px';
+            trendingEpisodes[i].style.height = '300px';
+            // Looking to add the logo of the anime onto the middle of the gif somehow
+            trendingEpisodes[i].textContent = 'test';
         });
 
         trendingEpisodes[i].addEventListener('mouseout', function () {
             trendingEpisodes[i].style.width = '100px';
             trendingEpisodes[i].style.height = '300px';
+            // Remove logo of anime from the middle when mouse isn't hovering
+            trendingEpisodes[i].textContent = '';
         })
     }
 }
