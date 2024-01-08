@@ -9,6 +9,12 @@ const buttons = document.getElementsByTagName('button');
 const trendingChapters = document.getElementsByClassName('chapter');
 const trendingEpisodes = document.getElementsByClassName('episode');
 
+// Logos for the episodes
+let jjkLogo = document.createElement('img');
+jjkLogo.src = 'images/jjk-logo.png';
+jjkLogo.style.maxWidth = '100%';
+jjkLogo.style.maxHeight = '100%';
+
 // IntersectionObserver elements
 // Allows for animation that plays when scrolled into view
 const inViewport = (entries, observer) => {
@@ -116,6 +122,7 @@ function setEventListeners() {
         }
     });
 
+    // Trending chapters' animations
     for (let i = 0; i < trendingChapters.length; i++) {
         trendingChapters[i].addEventListener('mouseover', function () {
             trendingChapters[i].style.width = '400px';
@@ -128,19 +135,20 @@ function setEventListeners() {
         })
     }
 
+    // Trending episodes' animations
     for (let i = 0; i < trendingEpisodes.length; i++) {
         trendingEpisodes[i].addEventListener('mouseover', function () {
             trendingEpisodes[i].style.width = '500px';
             trendingEpisodes[i].style.height = '300px';
             // Looking to add the logo of the anime onto the middle of the gif somehow
-            trendingEpisodes[i].textContent = 'test';
+            trendingEpisodes[i].appendChild(jjkLogo);
         });
 
         trendingEpisodes[i].addEventListener('mouseout', function () {
             trendingEpisodes[i].style.width = '100px';
             trendingEpisodes[i].style.height = '300px';
             // Remove logo of anime from the middle when mouse isn't hovering
-            trendingEpisodes[i].textContent = '';
+            trendingEpisodes[i].removeChild(jjkLogo);
         })
     }
 }
