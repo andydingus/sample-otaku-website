@@ -141,6 +141,7 @@ function setEventListeners() {
             trendingEpisodes[i].style.width = '500px';
             trendingEpisodes[i].style.height = '300px';
             // Looking to add the logo of the anime onto the middle of the gif somehow
+            // Use element.classList.contains(class) to achieve the next step (each anime has their own logo when hovered)
             trendingEpisodes[i].appendChild(jjkLogo);
         });
 
