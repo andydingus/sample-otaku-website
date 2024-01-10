@@ -264,7 +264,7 @@ ul {
 }
 
 .episode.frieren:hover {
-    background-image: url(images/frieren-gif.gif);
+    background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 1)), url(images/frieren-gif.gif);
 }
 
 .episode.onk {
@@ -272,7 +272,7 @@ ul {
 }
 
 .episode.onk:hover {
-    background-image: url(images/onk-gif.gif);
+    background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 1)), url(images/onk-gif.gif);
 }
 
 .episode.op-wano {
@@ -280,7 +280,7 @@ ul {
 }
 
 .episode.op-wano:hover {
-    background-image: url(images/op-wano-gif.gif);
+    background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 1)), url(images/op-wano-gif.gif);
 }
 
 .episode.nier {
@@ -288,7 +288,7 @@ ul {
 }
 
 .episode.nier:hover {
-    background-image: url(images/nier-gif.webp);
+    background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 1)), url(images/nier-gif.webp);
 }
 
 .episode.bleach {
@@ -296,7 +296,7 @@ ul {
 }
 
 .episode.bleach:hover {
-    background-image: url(images/bleach-tybw-gif.gif);
+    background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 1)), url(images/bleach-tybw-gif.gif);
 }
 
 
