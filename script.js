@@ -10,10 +10,42 @@ const trendingChapters = document.getElementsByClassName('chapter');
 const trendingEpisodes = document.getElementsByClassName('episode');
 
 // Logos for the episodes
-let jjkLogo = document.createElement('img');
+const jjkLogo = document.createElement('img');
+const frierenLogo = document.createElement('img');
+const onkLogo = document.createElement('img');
+const opLogo = document.createElement('img');
+const nierLogo = document.createElement('img');
+const bleachLogo = document.createElement('img');
+
 jjkLogo.src = 'images/jjk-logo.png';
-jjkLogo.style.maxWidth = '100%';
+jjkLogo.style.maxWidth = '80%';
 jjkLogo.style.maxHeight = '100%';
+jjkLogo.style.margin = 'auto';
+
+frierenLogo.src = 'images/frieren-logo.png';
+frierenLogo.style.maxWidth = '80%';
+frierenLogo.style.maxHeight = '100%';
+frierenLogo.style.margin = 'auto';
+
+onkLogo.src = 'images/onk-logo.png';
+onkLogo.style.maxWidth = '70%';
+onkLogo.style.maxHeight = '100%';
+onkLogo.style.margin = 'auto';
+
+opLogo.src = 'images/op-logo.png';
+opLogo.style.maxWidth = '80%';
+opLogo.style.maxHeight = '100%';
+opLogo.style.margin = 'auto';
+
+nierLogo.src = 'images/nier-logo.png';
+nierLogo.style.maxWidth = '80%';
+nierLogo.style.maxHeight = '100%';
+nierLogo.style.margin = 'auto';
+
+bleachLogo.src = 'images/bleach-logo.png';
+bleachLogo.style.maxWidth = '50%';
+bleachLogo.style.maxHeight = '100%';
+bleachLogo.style.margin = 'auto';
 
 // IntersectionObserver elements
 // Allows for animation that plays when scrolled into view
@@ -31,7 +63,7 @@ const obsOptions = {
 
 // Attach observer to every [data-inviewport] element:
 document.querySelectorAll('[data-inviewport]').forEach(el => {
-  Obs.observe(el, obsOptions);
+    Obs.observe(el, obsOptions);
 });
 
 
@@ -142,14 +174,40 @@ function setEventListeners() {
             trendingEpisodes[i].style.height = '300px';
             // Looking to add the logo of the anime onto the middle of the gif somehow
             // Use element.classList.contains(class) to achieve the next step (each anime has their own logo when hovered)
-            trendingEpisodes[i].appendChild(jjkLogo);
+            if (trendingEpisodes[i].classList.contains('jjk')) {
+                trendingEpisodes[i].appendChild(jjkLogo);
+            } else if (trendingEpisodes[i].classList.contains('frieren')) {
+                trendingEpisodes[i].appendChild(frierenLogo);
+            } else if (trendingEpisodes[i].classList.contains('onk')) {
+                trendingEpisodes[i].appendChild(onkLogo);
+            } else if (trendingEpisodes[i].classList.contains('op-wano')) {
+                trendingEpisodes[i].appendChild(opLogo);
+            } else if (trendingEpisodes[i].classList.contains('nier')) {
+                trendingEpisodes[i].appendChild(nierLogo);
+            } else {
+                trendingEpisodes[i].appendChild(bleachLogo);
+            }
+
         });
 
         trendingEpisodes[i].addEventListener('mouseout', function () {
             trendingEpisodes[i].style.width = '100px';
             trendingEpisodes[i].style.height = '300px';
             // Remove logo of anime from the middle when mouse isn't hovering
-            trendingEpisodes[i].removeChild(jjkLogo);
+            if (trendingEpisodes[i].classList.contains('jjk')) {
+                trendingEpisodes[i].removeChild(jjkLogo);
+            } else if (trendingEpisodes[i].classList.contains('frieren')) {
+                trendingEpisodes[i].removeChild(frierenLogo);
+            } else if (trendingEpisodes[i].classList.contains('onk')) {
+                trendingEpisodes[i].removeChild(onkLogo);
+            } else if (trendingEpisodes[i].classList.contains('op-wano')) {
+                trendingEpisodes[i].removeChild(opLogo);
+            } else if (trendingEpisodes[i].classList.contains('nier')) {
+                trendingEpisodes[i].removeChild(nierLogo);
+            } else {
+                trendingEpisodes[i].removeChild(bleachLogo);
+            }
+
         })
     }
 }

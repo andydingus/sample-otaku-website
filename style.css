@@ -8,7 +8,13 @@ body {
     color: #311D3F;
 }
 
-h1, h2, h3, h4, h5, h6, button {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+button {
     font-family: 'DotGothic16', sans-serif;
 }
 
@@ -82,6 +88,7 @@ ul {
     background-repeat: no-repeat;
     width: 70px;
 }
+
 /* Used as a test */
 /* .banner-text {
     font-family: 'DotGothic16', sans-serif;
@@ -126,12 +133,12 @@ ul {
 .logo-text {
     font-family: 'DotGothic16', sans-serif;
     font-size: 50px;
-    font-weight: 100; 
+    font-weight: 100;
 }
 
 .container {
     display: flex;
-    flex-wrap:wrap;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
 }
@@ -149,7 +156,8 @@ ul {
 
 /* Link styles & animations */
 
-.article-link, .article-link:visited {
+.article-link,
+.article-link:visited {
     font-family: 'DotGothic16', sans-serif;
     text-decoration: none;
     color: #AC7CB4;
@@ -176,7 +184,7 @@ ul {
 }
 
 .chapter:hover {
-    translate: 0px -10px;   
+    translate: 0px -10px;
 }
 
 .episode {
@@ -191,27 +199,28 @@ ul {
 }
 
 /* Thinking about doing something different for the animations on this one */
-.episode:hover { 
-    translate: 0px -10px;  
+.episode:hover {
+    translate: 0px -10px;
 }
 
-.chapter, .episode {
+.chapter,
+.episode {
     background-size: cover;
     background-repeat: no-repeat;
 }
 
 /* Makes a div a link */
 .link-spanner {
-    position:absolute; 
-    width:100%;
-    height:100%;
-    top:0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
     left: 0;
     z-index: 1;
 }
 
 /* .top1 { */
-    /* width: 400px;
+/* width: 400px;
     height: 600px; */
 /* } */
 
@@ -246,7 +255,8 @@ ul {
 }
 
 .episode.jjk:hover {
-    background-image: url(images/jjk-s2-gif.webp);
+    /* Continue adding these to the other hovers */
+    background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 1)), url(images/jjk-s2-gif.webp);
 }
 
 .episode.frieren {
