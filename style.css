@@ -171,16 +171,20 @@ ul {
     cursor: pointer;
 }
 
-/* 'This Week's Trending Chapters!' section styles */
-.chapter {
+/* 'This Week's Trending Chapters!' & 'This Week's Trending Episodes!' sections styles */
+.chapter, .episode {
     position: relative;
     flex-direction: column;
     justify-content: center;
     width: 100px;
     height: 300px;
     box-shadow: 10px -10px;
+    border-radius: 10px;
     cursor: pointer;
     transition: all 0.35s ease;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .chapter:hover {
@@ -188,25 +192,14 @@ ul {
 }
 
 .episode {
-    position: relative;
-    flex-direction: column;
-    justify-content: center;
-    width: 100px;
-    height: 300px;
-    box-shadow: 10px -10px;
-    cursor: pointer;
-    transition: all 0.35s ease;
+    width: 375px;
+    height: 500px;
 }
 
 /* Thinking about doing something different for the animations on this one */
 .episode:hover {
     translate: 0px -10px;
-}
-
-.chapter,
-.episode {
-    background-size: cover;
-    background-repeat: no-repeat;
+    border: solid 5px #F1ECE1;
 }
 
 /* Makes a div a link */
@@ -377,6 +370,10 @@ hr {
 .flexible {
     width: 100%;
     height: auto;
+}
+
+.column {
+    flex-direction: column;
 }
 
 /* Animations that play when an element is in the viewport */

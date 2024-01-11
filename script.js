@@ -8,6 +8,7 @@ const articleLinks = document.getElementsByClassName('article-link');
 const buttons = document.getElementsByTagName('button');
 const trendingChapters = document.getElementsByClassName('chapter');
 const trendingEpisodes = document.getElementsByClassName('episode');
+const borderEpisode = document.querySelector('.select');
 
 // Logos for the episodes
 const jjkLogo = document.createElement('img');
@@ -170,8 +171,9 @@ function setEventListeners() {
     // Trending episodes' animations
     for (let i = 0; i < trendingEpisodes.length; i++) {
         trendingEpisodes[i].addEventListener('mouseover', function () {
-            trendingEpisodes[i].style.width = '500px';
-            trendingEpisodes[i].style.height = '300px';
+            trendingEpisodes[i].style.width = '375px';
+            trendingEpisodes[i].style.height = '500px';
+            trendingEpisodes[i].style.boxShadow = '10px 10px';
             // Looking to add the logo of the anime onto the middle of the gif somehow
             // Use element.classList.contains(class) to achieve the next step (each anime has their own logo when hovered)
             if (trendingEpisodes[i].classList.contains('jjk')) {
@@ -191,8 +193,9 @@ function setEventListeners() {
         });
 
         trendingEpisodes[i].addEventListener('mouseout', function () {
-            trendingEpisodes[i].style.width = '100px';
-            trendingEpisodes[i].style.height = '300px';
+            trendingEpisodes[i].style.width = '375px';
+            trendingEpisodes[i].style.height = '500px';
+            trendingEpisodes[i].style.boxShadow = '10px -10px';
             // Remove logo of anime from the middle when mouse isn't hovering
             if (trendingEpisodes[i].classList.contains('jjk')) {
                 trendingEpisodes[i].removeChild(jjkLogo);
