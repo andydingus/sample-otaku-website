@@ -176,9 +176,9 @@ ul {
     position: relative;
     flex-direction: column;
     justify-content: center;
-    width: 100px;
-    height: 300px;
-    box-shadow: 10px -10px;
+    width: 50px;
+    height: 400px;
+    /* box-shadow: 10px -10px; */
     border-radius: 10px;
     cursor: pointer;
     transition: all 0.35s ease;
@@ -187,19 +187,24 @@ ul {
     background-position: center;
 }
 
+.chapter {
+    box-shadow: 10px -10px;
+}
+
 .chapter:hover {
     translate: 0px -10px;
+    border: solid 5px yellow;
 }
 
 .episode {
     width: 375px;
-    height: 500px;
+    height: 600px;
 }
 
 /* Thinking about doing something different for the animations on this one */
 .episode:hover {
     translate: 0px -10px;
-    border: solid 5px #F1ECE1;
+    border: solid 5px #311D3F;
 }
 
 /* Makes a div a link */
@@ -269,7 +274,7 @@ ul {
 }
 
 .episode.op-wano {
-    background-image: url(images/op-wanoarc.png);
+    background-image: url(images/op-egghead.jpg);
 }
 
 .episode.op-wano:hover {

@@ -156,24 +156,24 @@ function setEventListeners() {
     });
 
     // Trending chapters' animations
-    for (let i = 0; i < trendingChapters.length; i++) {
-        trendingChapters[i].addEventListener('mouseover', function () {
-            trendingChapters[i].style.width = '400px';
-            trendingChapters[i].style.height = '600px';
-        });
+    // for (let i = 0; i < trendingChapters.length; i++) {
+    //     trendingChapters[i].addEventListener('mouseover', function () {
+    //         trendingChapters[i].style.width = '400px';
+    //         trendingChapters[i].style.height = '600px';
+    //     });
 
-        trendingChapters[i].addEventListener('mouseout', function () {
-            trendingChapters[i].style.width = '100px';
-            trendingChapters[i].style.height = '300px';
-        })
-    }
+    //     trendingChapters[i].addEventListener('mouseout', function () {
+    //         trendingChapters[i].style.width = '100px';
+    //         trendingChapters[i].style.height = '300px';
+    //     })
+    // }
 
     // Trending episodes' animations
     for (let i = 0; i < trendingEpisodes.length; i++) {
         trendingEpisodes[i].addEventListener('mouseover', function () {
-            trendingEpisodes[i].style.width = '375px';
-            trendingEpisodes[i].style.height = '500px';
-            trendingEpisodes[i].style.boxShadow = '10px 10px';
+            // trendingEpisodes[i].style.width = '375px';
+            // trendingEpisodes[i].style.height = '500px';
+            // trendingEpisodes[i].style.boxShadow = '10px 10px';
             // Looking to add the logo of the anime onto the middle of the gif somehow
             // Use element.classList.contains(class) to achieve the next step (each anime has their own logo when hovered)
             if (trendingEpisodes[i].classList.contains('jjk')) {
@@ -189,13 +189,12 @@ function setEventListeners() {
             } else {
                 trendingEpisodes[i].appendChild(bleachLogo);
             }
-
         });
 
         trendingEpisodes[i].addEventListener('mouseout', function () {
-            trendingEpisodes[i].style.width = '375px';
-            trendingEpisodes[i].style.height = '500px';
-            trendingEpisodes[i].style.boxShadow = '10px -10px';
+            // trendingEpisodes[i].style.width = '375px';
+            // trendingEpisodes[i].style.height = '500px';
+            // trendingEpisodes[i].style.boxShadow = '10px -10px';
             // Remove logo of anime from the middle when mouse isn't hovering
             if (trendingEpisodes[i].classList.contains('jjk')) {
                 trendingEpisodes[i].removeChild(jjkLogo);
