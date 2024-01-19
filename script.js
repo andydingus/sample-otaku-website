@@ -2,6 +2,7 @@
 const lightSwitch = document.querySelector('.lightswitch');
 const headerBanner = document.querySelector('h1.logo');
 const hamburger = document.querySelector('.hamburger');
+const cross = document.querySelector('.cross');
 const nav = document.querySelector('.nav-div');
 const navIcons = document.getElementsByClassName('icon');
 const navLinks = document.querySelectorAll('.nav-link');
@@ -227,6 +228,7 @@ const navSlide = () => {
 
     const toggleBurgerAnimation = () => {
         hamburger.classList.toggle('toggle');
+        cross.classList.toggle('toggle');
     };
 
     // Toggle nav event
@@ -234,6 +236,11 @@ const navSlide = () => {
         toggleNav();
         animateLinks();
         toggleBurgerAnimation();
+    });
+
+    cross.addEventListener('click', () => {
+        toggleNav();
+        animateLinks();
     });
 };
 

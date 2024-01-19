@@ -64,6 +64,18 @@ nav {
     transition: all 0.3s ease;
 }
 
+.cross {
+    display: none;
+    cursor: pointer;
+}
+
+.cross div {
+    width: 25px;
+    height: 3px;
+    margin: 5px;
+    background-color: white;
+}
+
 .menu-title {
     display: none;
 }
@@ -81,6 +93,12 @@ ul {
     gap: 20px;
     border-style: dotted;
     border-radius: 45px;
+}
+
+.container.no-wrap {
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
 }
 
 .icon {
@@ -379,11 +397,14 @@ hr {
         display: block;
     }
 
+    .cross {
+        display: block;
+    }
+
     .nav-div {
         position: absolute;
         left: 0px;
         height: 100vh;
-        top: 5vh;
         background-color: #F1ECE1;
         display: flex;
         flex-direction: column;
@@ -429,9 +450,9 @@ hr {
     overflow-y: hidden;
 }
 
-.nav-darken {
+/* .nav-darken {
     box-shadow:0 0 0 2000px rgba(0,0,0,0.65);
-}
+} */
 
 /* Link animation */
 @keyframes navLinkFade {
