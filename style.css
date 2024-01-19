@@ -96,6 +96,7 @@ ul {
 }
 
 .container.no-wrap {
+    display: none;
     justify-content: space-between;
     width: 100%;
     align-items: center;
@@ -392,9 +393,13 @@ hr {
 }
 
 /* Media styles (different viewport sizes styles) */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     .hamburger {
         display: block;
+    }
+
+    .container.no-wrap {
+        display: flex;
     }
 
     .cross {
@@ -444,6 +449,19 @@ hr {
 .toggle .line3 {
     transform: rotate(45deg) translate(-5px,-6px);
 }
+
+.cross .line1 {
+    transform: rotate(-45deg) translate(-5px,6px);
+}
+
+.cross .line2 {
+    opacity: 0;
+}
+
+.cross .line3 {
+    transform: rotate(45deg) translate(-5px,-6px);
+}
+
 
 .nav-active {
     transform: translateX(0%);

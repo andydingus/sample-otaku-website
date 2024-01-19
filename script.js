@@ -228,7 +228,6 @@ const navSlide = () => {
 
     const toggleBurgerAnimation = () => {
         hamburger.classList.toggle('toggle');
-        cross.classList.toggle('toggle');
     };
 
     // Toggle nav event
@@ -240,6 +239,7 @@ const navSlide = () => {
 
     cross.addEventListener('click', () => {
         toggleNav();
+        toggleBurgerAnimation();
         animateLinks();
     });
 };
