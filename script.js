@@ -1,14 +1,18 @@
 // Ready to be scripted!
 const lightSwitch = document.querySelector('.lightswitch');
 const headerBanner = document.querySelector('h1.logo');
+const hamburger = document.querySelector('.hamburger');
+const nav = document.querySelector('.nav-div');
 const navIcons = document.getElementsByClassName('icon');
-const navLinks = document.getElementsByClassName('nav-link-text');
+const navLinks = document.querySelectorAll('.nav-link');
+const navLinksText = document.getElementsByClassName('nav-link-text');
 const articles = document.getElementsByClassName('container article');
 const articleLinks = document.getElementsByClassName('article-link');
 const buttons = document.getElementsByTagName('button');
 const trendingChapters = document.getElementsByClassName('chapter');
 const trendingEpisodes = document.getElementsByClassName('episode');
 const borderEpisode = document.querySelector('.select');
+
 
 // Logos for the episodes
 const jjkLogo = document.createElement('img');
@@ -80,143 +84,161 @@ let darkMode = false;
 function setEventListeners() {
     lightSwitch.addEventListener('mouseup', function () {
         if (!darkMode) {
-            document.body.style.background = '#00506F';
-            document.body.style.color = '#F1ECE1';
-            document.body.style.transition = 'all 1s ease-out'; // Illusion of smooth 'transition'
-
-            // Changing nav icons
-            for (let i = 0; i < navIcons.length; i++) {
-                navIcons[i].style.backgroundImage = 'url(images/streetlight.png)';
-            }
-
-            // Applying the text color to the nav links
-            for (let i = 0; i < navLinks.length; i++) {
-                navLinks[i].style.color = 'white';
-                navLinks[i].style.transition = 'all 0.2s ease-out';
-            }
-
-            // Changing the banner
-            headerBanner.style.backgroundImage = 'linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)), url("images/blue.gif")';
-            headerBanner.style.backgroundColor = 'rgba(0,0,0,0.3)';
-            headerBanner.style.backgroundBlendMode = 'darken';
-
-            // Applying the text color to the article links
-            for (let i = 0; i < articleLinks.length; i++) {
-                articleLinks[i].style.color = '#FF6666';
-                articleLinks[i].style.transition = 'all 1s ease-out';
-            }
-
-            // Changing the buttons
-            // this.textContent = 'Light Mode';
-            this.setAttribute('src', 'images/moon.svg');
-            for (let i = 0; i < buttons.length; i++) {
-                buttons[i].style.backgroundColor = '#F1ECE1';
-                buttons[i].style.color = '#311D3F';
-                buttons[i].style.transition = 'all 1s ease-out'; // Animation
-            }
-
-            darkMode = true;
-            lightMode = false;
+            setDarkModeStyles();
         } else {
-            document.body.style.background = '#F1ECE1';
-            document.body.style.color = '#311D3F';
-
-            // Changing nav icons
-            for (let i = 0; i < navIcons.length; i++) {
-                navIcons[i].style.backgroundImage = 'url(images/sakura.png)';
-            }
-
-            // Applying the text color to the nav links
-            for (let i = 0; i < navLinks.length; i++) {
-                navLinks[i].style.color = '#311D3F';
-            }
-
-            // Changing the banner
-            headerBanner.style.backgroundImage = 'linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.7)), url("images/pink.gif")';
-            headerBanner.style.backgroundColor = 'rgba(255,255,255,0.2)';
-            headerBanner.style.backgroundBlendMode = 'lighten';
-
-            // Applying the text color to the article links
-            for (let i = 0; i < articleLinks.length; i++) {
-                articleLinks[i].style.color = '#AC7CB4';
-            }
-
-            // Changing the lightswitch
-            // this.textContent = 'Dark Mode';
-            this.setAttribute('src', 'images/sun.svg');
-            for (let i = 0; i < buttons.length; i++) {
-                buttons[i].style.backgroundColor = '#311D3F';
-                buttons[i].style.color = '#F1ECE1';
-                buttons[i].style.transition = 'all 1s ease-out';
-            }
-
-            lightMode = true;
-            darkMode = false;
+            setLightModeStyles();
         }
     });
-
-    // Trending chapters' animations
-    // for (let i = 0; i < trendingChapters.length; i++) {
-    //     trendingChapters[i].addEventListener('mouseover', function () {
-    //         trendingChapters[i].style.width = '400px';
-    //         trendingChapters[i].style.height = '600px';
-    //     });
-
-    //     trendingChapters[i].addEventListener('mouseout', function () {
-    //         trendingChapters[i].style.width = '100px';
-    //         trendingChapters[i].style.height = '300px';
-    //     })
-    // }
 
     // Trending episodes' animations
     for (let i = 0; i < trendingEpisodes.length; i++) {
         trendingEpisodes[i].addEventListener('mouseover', function () {
-            // trendingEpisodes[i].style.width = '375px';
-            // trendingEpisodes[i].style.height = '500px';
-            // trendingEpisodes[i].style.boxShadow = '10px 10px';
-            // Looking to add the logo of the anime onto the middle of the gif somehow
-            // Use element.classList.contains(class) to achieve the next step (each anime has their own logo when hovered)
-            if (trendingEpisodes[i].classList.contains('jjk')) {
-                trendingEpisodes[i].appendChild(jjkLogo);
-            } else if (trendingEpisodes[i].classList.contains('frieren')) {
-                trendingEpisodes[i].appendChild(frierenLogo);
-            } else if (trendingEpisodes[i].classList.contains('onk')) {
-                trendingEpisodes[i].appendChild(onkLogo);
-            } else if (trendingEpisodes[i].classList.contains('op-wano')) {
-                trendingEpisodes[i].appendChild(opLogo);
-            } else if (trendingEpisodes[i].classList.contains('nier')) {
-                trendingEpisodes[i].appendChild(nierLogo);
-            } else {
-                trendingEpisodes[i].appendChild(bleachLogo);
-            }
+            setTrendingEpisodeStyles(trendingEpisodes[i]);
         });
 
         trendingEpisodes[i].addEventListener('mouseout', function () {
-            // trendingEpisodes[i].style.width = '375px';
-            // trendingEpisodes[i].style.height = '500px';
-            // trendingEpisodes[i].style.boxShadow = '10px -10px';
-            // Remove logo of anime from the middle when mouse isn't hovering
-            if (trendingEpisodes[i].classList.contains('jjk')) {
-                trendingEpisodes[i].removeChild(jjkLogo);
-            } else if (trendingEpisodes[i].classList.contains('frieren')) {
-                trendingEpisodes[i].removeChild(frierenLogo);
-            } else if (trendingEpisodes[i].classList.contains('onk')) {
-                trendingEpisodes[i].removeChild(onkLogo);
-            } else if (trendingEpisodes[i].classList.contains('op-wano')) {
-                trendingEpisodes[i].removeChild(opLogo);
-            } else if (trendingEpisodes[i].classList.contains('nier')) {
-                trendingEpisodes[i].removeChild(nierLogo);
-            } else {
-                trendingEpisodes[i].removeChild(bleachLogo);
-            }
+            resetTrendingEpisodeStyles(trendingEpisodes[i]);
+        });
+    }
 
-        })
+    
+}
+
+function setDarkModeStyles() {
+    document.body.style.background = '#00506F';
+    document.body.style.color = '#F1ECE1';
+    document.body.style.transition = 'all 1s ease-out';
+
+    // Changing nav icons
+    setNavIconsStyles('url(images/streetlight.png)', 'white');
+
+    // Changing the banner
+    headerBanner.style.backgroundImage = 'linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)), url("images/blue.gif")';
+    headerBanner.style.backgroundColor = 'rgba(0,0,0,0.3)';
+    headerBanner.style.backgroundBlendMode = 'darken';
+
+    // Applying the text color to the article links
+    setArticleLinksStyles('#FF6666');
+
+    // Changing the buttons
+    setButtonsStyles('#F1ECE1', '#311D3F');
+
+    darkMode = true;
+    lightMode = false;
+}
+
+function setLightModeStyles() {
+    document.body.style.background = '#F1ECE1';
+    document.body.style.color = '#311D3F';
+
+    // Changing nav icons
+    setNavIconsStyles('url(images/sakura.png)', '#311D3F');
+
+    // Changing the banner
+    headerBanner.style.backgroundImage = 'linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.7)), url("images/pink.gif")';
+    headerBanner.style.backgroundColor = 'rgba(255,255,255,0.2)';
+    headerBanner.style.backgroundBlendMode = 'lighten';
+
+    // Applying the text color to the article links
+    setArticleLinksStyles('#AC7CB4');
+
+    // Changing the buttons
+    setButtonsStyles('#311D3F', '#F1ECE1');
+
+    lightMode = true;
+    darkMode = false;
+}
+
+function setNavIconsStyles(backgroundImage, color) {
+    for (let i = 0; i < navIcons.length; i++) {
+        navIcons[i].style.backgroundImage = backgroundImage;
+    }
+
+    // Applying the text color to the nav links
+    for (let i = 0; i < navLinksText.length; i++) {
+        navLinksText[i].style.color = color;
+        navLinksText[i].style.transition = 'all 0.2s ease-out';
     }
 }
 
+function setArticleLinksStyles(color) {
+    for (let i = 0; i < articleLinks.length; i++) {
+        articleLinks[i].style.color = color;
+        articleLinks[i].style.transition = 'all 1s ease-out';
+    }
+}
 
+function setButtonsStyles(backgroundColor, color) {
+    for (let i = 0; i < buttons.length; i++) {
+        buttons[i].style.backgroundColor = backgroundColor;
+        buttons[i].style.color = color;
+        buttons[i].style.transition = 'all 1s ease-out';
+    }
+}
+
+function setTrendingEpisodeStyles(episode) {
+    // Additional logic for trending episodes' mouseover event
+    // ...
+    if (episode.classList.contains('jjk')) {
+        episode.appendChild(jjkLogo);
+    } else if (episode.classList.contains('frieren')) {
+        episode.appendChild(frierenLogo);
+    } else if (episode.classList.contains('onk')) {
+        episode.appendChild(onkLogo);
+    } else if (episode.classList.contains('op-wano')) {
+        episode.appendChild(opLogo);
+    } else if (episode.classList.contains('nier')) {
+        episode.appendChild(nierLogo);
+    } else {
+        episode.appendChild(bleachLogo);
+    }
+}
+
+function resetTrendingEpisodeStyles(episode) {
+    // Additional logic for trending episodes' mouseout event
+    if (episode.classList.contains('jjk')) {
+        episode.removeChild(jjkLogo);
+    } else if (episode.classList.contains('frieren')) {
+        episode.removeChild(frierenLogo);
+    } else if (episode.classList.contains('onk')) {
+        episode.removeChild(onkLogo);
+    } else if (episode.classList.contains('op-wano')) {
+        episode.removeChild(opLogo);
+    } else if (episode.classList.contains('nier')) {
+        episode.removeChild(nierLogo);
+    } else {
+        episode.removeChild(bleachLogo);
+    }
+}
+
+const navSlide = () => {
+    const toggleNav = () => {
+        nav.classList.toggle('nav-active');
+        nav.classList.toggle('nav-darken');
+        document.body.classList.toggle('nav-active');
+    };
+
+    const animateLinks = () => {
+        navLinks.forEach((link, index) => {
+            const animationDelay = index / 10 + 0.3;
+            link.style.animation = link.style.animation ? '' : `navLinkFade 0.5s ease forwards ${animationDelay}s`;
+        });
+    };
+
+    const toggleBurgerAnimation = () => {
+        hamburger.classList.toggle('toggle');
+    };
+
+    // Toggle nav event
+    hamburger.addEventListener('click', () => {
+        toggleNav();
+        animateLinks();
+        toggleBurgerAnimation();
+    });
+};
 
 setEventListeners();
+navSlide();
 
 
 // function chapterSelect() {
