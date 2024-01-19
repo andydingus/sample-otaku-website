@@ -2,7 +2,9 @@
 const lightSwitch = document.querySelector('.lightswitch');
 const headerBanner = document.querySelector('h1.logo');
 const hamburger = document.querySelector('.hamburger');
+const hamburgerLines = hamburger.querySelectorAll('div');
 const cross = document.querySelector('.cross');
+const crossLines = cross.querySelectorAll('div');
 const nav = document.querySelector('.nav-div');
 const navIcons = document.getElementsByClassName('icon');
 const navLinks = document.querySelectorAll('.nav-link');
@@ -113,6 +115,10 @@ function setDarkModeStyles() {
     // Changing nav icons
     setNavIconsStyles('url(images/streetlight.png)', 'white');
 
+    // Changing hamburger menu
+    nav.style.backgroundColor = '#00506f';
+    setHamburgerStyles('#F1ECE1', [...hamburgerLines, ...crossLines]);
+
     // Changing the banner
     headerBanner.style.backgroundImage = 'linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)), url("images/blue.gif")';
     headerBanner.style.backgroundColor = 'rgba(0,0,0,0.3)';
@@ -135,6 +141,10 @@ function setLightModeStyles() {
     // Changing nav icons
     setNavIconsStyles('url(images/sakura.png)', '#311D3F');
 
+    // Changing hamburger menu
+    nav.style.backgroundColor = '#F1ECE1';
+    setHamburgerStyles('#311D3F', [...hamburgerLines, ...crossLines]);
+
     // Changing the banner
     headerBanner.style.backgroundImage = 'linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.7)), url("images/pink.gif")';
     headerBanner.style.backgroundColor = 'rgba(255,255,255,0.2)';
@@ -148,6 +158,10 @@ function setLightModeStyles() {
 
     lightMode = true;
     darkMode = false;
+}
+
+function setHamburgerStyles(backgroundColor, lines){
+    lines.forEach(line => line.style.backgroundColor = backgroundColor);
 }
 
 function setNavIconsStyles(backgroundImage, color) {

@@ -51,6 +51,11 @@ nav {
     justify-content: space-between;
 }
 
+.empty {
+    display: none;
+    flex-grow: 1
+}
+
 .hamburger {
     display: none;
     cursor: pointer;
@@ -60,24 +65,29 @@ nav {
     width: 25px;
     height: 3px;
     margin: 5px;
-    background-color: white;
+    background-color: #311D3F;
     transition: all 0.3s ease;
 }
 
 .cross {
     display: none;
     cursor: pointer;
+    /* padding-right: 10px; */
 }
 
 .cross div {
     width: 25px;
     height: 3px;
     margin: 5px;
-    background-color: white;
+    background-color: #311D3F;
 }
 
 .menu-title {
+    font-family: 'Dot Gothic 16', serif;
+    font-size: 30px;
     display: none;
+    flex-grow: 2;
+    /* padding-left: 10px; */
 }
 
 ul {
@@ -406,7 +416,12 @@ hr {
         display: block;
     }
 
+    .empty {
+        display: block;
+    }
+
     .nav-div {
+        padding: 10px;
         position: absolute;
         left: 0px;
         height: 100vh;
@@ -419,13 +434,14 @@ hr {
         transition: transform 0.5s ease-in;
         /* Moves the links to the desired position (positive values = moves right, negative values = moves left) */
         transform: translateX(-100%);
-        border-style: none;
+        /* border-style: none; */
         border-radius: 0;
         z-index:999;
     }
 
     .menu-title {
         display: block;
+        font-family: inherit;
     }
 
     .nav-link {
@@ -434,6 +450,27 @@ hr {
 
     .banner {
         display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .episode.jjk {
+        background-image: url(images/jjk-s2-gif.webp);
+    }
+    .episode.frieren {
+        background-image: url(images/frieren-gif.gif);
+    }
+    .episode.onk {
+        background-image: url(images/onk-gif.gif);
+    }
+    .episode.op-wano {
+        background-image: url(images/op-wano-gif.gif);
+    }
+    .episode.nier {
+        background-image: url(images/nier-gif.webp);
+    }
+    .episode.bleach {
+        background-image: url(images/bleach-tybw-gif.gif);
     }
 }
 
