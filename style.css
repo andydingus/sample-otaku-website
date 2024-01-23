@@ -69,6 +69,10 @@ nav {
     transition: all 0.3s ease;
 }
 
+.mobile-only {
+    display: none;
+}
+
 .cross {
     display: none;
     cursor: pointer;
@@ -405,6 +409,10 @@ hr {
 /* Media styles (different viewport sizes styles) */
 @media (max-width: 1024px) {
     .hamburger {
+        display: block;
+    }
+
+    .mobile-only {
         display: block;
     }
 
