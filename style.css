@@ -1,13 +1,18 @@
 * {
-    /* font-family: 'Noto Sans JP', sans-serif; */
-    font-family: 'Noto Serif JP', serif;
-    font-size: 1em;
+  /* font-family: 'Noto Sans JP', sans-serif; */
+  font-family: "Noto Serif JP", serif;
+  font-size: 1em;
+}
+
+:root {
+  --primary-color: #f1ece1;
+  --secondary-color: #311d3f;
 }
 
 body {
-    background: #F1ECE1;
-    color: #311D3F;
-    margin: 12px;
+  background: var(--primary-color);
+  color: var(--secondary-color);
+  margin: 12px;
 }
 
 h1,
@@ -17,117 +22,117 @@ h4,
 h5,
 h6,
 button {
-    font-family: 'DotGothic16', sans-serif;
+  font-family: "DotGothic16", sans-serif;
 }
 
 h1 {
-    font-size: 3.25em;
-    text-align: center;
+  font-size: 3.25em;
+  text-align: center;
 }
 
 h2 {
-    text-align: center;
-    font-size: 1.75em;
+  text-align: center;
+  font-size: 1.75em;
 }
 
 p {
-    font-size: 1.25em;
-    text-align: center;
+  font-size: 1.25em;
+  text-align: center;
 }
 
 main {
-    margin-bottom: 50px;
+  margin-bottom: 50px;
 }
 
 button {
-    background-color: #311D3F;
-    color: #F1ECE1;
-    font-size: 1em;
-    border-radius: 12px;
-    cursor: pointer;
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  font-size: 1em;
+  border-radius: 12px;
+  cursor: pointer;
 }
 
 /* Nav styles */
 nav {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 .empty {
-    display: none;
-    flex-grow: 1
+  display: none;
+  flex-grow: 1;
 }
 
 .hamburger {
-    display: none;
-    cursor: pointer;
+  display: none;
+  cursor: pointer;
 }
 
 .hamburger div {
-    width: 25px;
-    height: 3px;
-    margin: 5px;
-    background-color: #311D3F;
-    transition: all 0.3s ease;
+  width: 25px;
+  height: 3px;
+  margin: 5px;
+  background-color: var(--secondary-color);
+  transition: all 0.3s ease;
 }
 
 .mobile-only {
-    display: none;
+  display: none;
 }
 
 .cross {
-    display: none;
-    cursor: pointer;
-    /* padding-right: 10px; */
+  display: none;
+  cursor: pointer;
+  /* padding-right: 10px; */
 }
 
 .cross div {
-    width: 25px;
-    height: 3px;
-    margin: 5px;
-    background-color: #311D3F;
+  width: 25px;
+  height: 3px;
+  margin: 5px;
+  background-color: var(--secondary-color);
 }
 
 ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
 }
 
 .nav-div {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    border-style: dotted;
-    border-radius: 45px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  border-style: dotted;
+  border-radius: 45px;
 }
 
 .container.no-wrap {
-    display: none;
-    justify-content: space-between;
-    width: 100%;
-    align-items: center;
+  display: none;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
 }
 
 .icon {
-    width: 40px;
-    height: auto;
-    background-image: url(images/sakura.png);
-    background-repeat: no-repeat;
-    background-size: cover;
+  width: 40px;
+  height: auto;
+  background-image: url(images/sakura.png);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 /* Flips an image horizontally */
 .flipped {
-    transform: scaleX(-1);
+  transform: scaleX(-1);
 }
 
 .banner {
-    background-image: url(images/fubuzilla.webp);
-    background-size: 100%;
-    background-repeat: no-repeat;
-    width: 70px;
+  background-image: url(images/fubuzilla.webp);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  width: 70px;
 }
 
 /* Used as a test */
@@ -137,12 +142,12 @@ ul {
 } */
 
 .nav-link-text {
-    display: block;
-    color: #311D3F;
-    text-align: center;
-    padding: 8px 16px;
-    text-decoration: none;
-    font-family: 'DotGothic16', sans-serif;
+  display: block;
+  color: var(--secondary-color);
+  text-align: center;
+  padding: 8px 16px;
+  text-decoration: none;
+  font-family: "DotGothic16", sans-serif;
 }
 
 /* .nav-link, .nav-link:visited {
@@ -152,110 +157,115 @@ ul {
 } */
 
 .nav-link a:hover {
-    transform: scale(1.25);
-    cursor: pointer;
+  transform: scale(1.25);
+  cursor: pointer;
 }
 
 .nav-link a {
-    transition: transform .2s;
+  transition: transform 0.2s;
 }
 
 /* Header logo styles */
 .logo {
-    padding: 50px;
-    /* Credit: https://life-style-s.blogspot.com/2018/11/pixel-art-background-gif.html */
-    background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.7)), url("images/pink.gif");
-    background-repeat: no-repeat;
-    background-size: cover;
-    border-style: dotted;
-    border-radius: 45px;
+  padding: 50px;
+  /* Credit: https://life-style-s.blogspot.com/2018/11/pixel-art-background-gif.html */
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.2),
+      rgba(255, 255, 255, 0.7)
+    ),
+    url("images/pink.gif");
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-style: dotted;
+  border-radius: 45px;
 }
 
 .logo-text {
-    font-family: 'DotGothic16', sans-serif;
-    font-size: 1em;
-    font-weight: 100;
+  font-family: "DotGothic16", sans-serif;
+  font-size: 1em;
+  font-weight: 100;
 }
 
 .container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
 }
 
 /* Main div styles */
 .article {
-    flex-direction: column;
-    justify-content: center;
-    width: 400px;
+  flex-direction: column;
+  justify-content: center;
+  width: 400px;
 }
 
 .article h2 {
-    transition: 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
 }
 
 /* Link styles & animations */
 
 .article-link,
 .article-link:visited {
-    font-family: 'DotGothic16', sans-serif;
-    text-decoration: none;
-    color: #AC7CB4;
-    position: relative;
+  font-family: "DotGothic16", sans-serif;
+  text-decoration: none;
+  color: #ac7cb4;
+  position: relative;
 }
 
 .article h2:hover {
-    /* transform: scale(1.25); */
-    transform: scale(1.15);
-    translate: 0px -10px;
-    cursor: pointer;
+  /* transform: scale(1.25); */
+  transform: scale(1.15);
+  translate: 0px -10px;
+  cursor: pointer;
 }
 
 /* 'This Week's Trending Chapters!' & 'This Week's Trending Episodes!' sections styles */
-.chapter, .episode {
-    position: relative;
-    flex-direction: column;
-    justify-content: center;
-    width: 50px;
-    height: 400px;
-    /* box-shadow: 10px -10px; */
-    border-radius: 10px;
-    cursor: pointer;
-    transition: all 0.35s ease;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+.chapter,
+.episode {
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+  width: 50px;
+  height: 400px;
+  /* box-shadow: 10px -10px; */
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.35s ease;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .chapter {
-    box-shadow: 10px -10px;
+  box-shadow: 10px -10px;
 }
 
 .chapter:hover {
-    translate: 0px -10px;
-    border: solid 5px yellow;
+  translate: 0px -10px;
+  border: solid 5px yellow;
 }
 
 .episode {
-    width: 375px;
-    height: 600px;
+  width: 375px;
+  height: 600px;
 }
 
 /* Thinking about doing something different for the animations on this one */
 .episode:hover {
-    translate: 0px -10px;
-    border: solid 5px #311D3F;
+  translate: 0px -10px;
+  border: solid 5px var(--secondary-color);
 }
 
 /* Makes a div a link */
 .link-spanner {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    z-index: 1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
 }
 
 /* .top1 { */
@@ -264,80 +274,85 @@ ul {
 /* } */
 
 .chapter.jjk {
-    background-image: url(images/jjk-vol1.webp);
+  background-image: url(images/jjk-vol1.webp);
 }
 
 /* Manga cover styles */
 .chapter.opm {
-    background-image: url(images/opm-vol1.webp);
+  background-image: url(images/opm-vol1.webp);
 }
 
 .chapter.op {
-    background-image: url(images/op-vol1.webp);
+  background-image: url(images/op-vol1.webp);
 }
 
 .chapter.ddd {
-    background-image: url(images/ddd-vol1.webp);
+  background-image: url(images/ddd-vol1.webp);
 }
 
 .chapter.kny {
-    background-image: url(images/kny-vol1.webp);
+  background-image: url(images/kny-vol1.webp);
 }
 
 .chapter.bl {
-    background-image: url(images/bl-vol1.webp);
+  background-image: url(images/bl-vol1.webp);
 }
 
 /* Anime poster styles */
 .episode.jjk {
-    background-image: url(images/jjk-s2.jpg);
+  background-image: url(images/jjk-s2.jpg);
 }
 
 .episode.jjk:hover {
-    /* Continue adding these to the other hovers */
-    background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 1)), url(images/jjk-s2-gif.webp);
+  /* Continue adding these to the other hovers */
+  background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 1)),
+    url(images/jjk-s2-gif.webp);
 }
 
 .episode.frieren {
-    background-image: url(images/frieren-s1.png);
+  background-image: url(images/frieren-s1.png);
 }
 
 .episode.frieren:hover {
-    background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 1)), url(images/frieren-gif.gif);
+  background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 1)),
+    url(images/frieren-gif.gif);
 }
 
 .episode.onk {
-    background-image: url(images/onk-s1.png);
+  background-image: url(images/onk-s1.png);
 }
 
 .episode.onk:hover {
-    background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 1)), url(images/onk-gif.gif);
+  background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 1)),
+    url(images/onk-gif.gif);
 }
 
 .episode.op-wano {
-    background-image: url(images/op-egghead.jpg);
+  background-image: url(images/op-egghead.jpg);
 }
 
 .episode.op-wano:hover {
-    background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 1)), url(images/op-wano-gif.gif);
+  background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 1)),
+    url(images/op-wano-gif.gif);
 }
 
 .episode.nier {
-    background-image: url(images/nier1.1a-s1.png);
+  background-image: url(images/nier1.1a-s1.png);
 }
 
 .episode.nier:hover {
-    background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 1)), url(images/nier-gif.webp);
+  background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 1)),
+    url(images/nier-gif.webp);
 }
 
 .episode.bleach {
-    background-image: url(images/bleach-tybw.png);
+  background-image: url(images/bleach-tybw.png);
 }
 
 .episode.bleach:hover {
-    background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 1)), url(images/bleach-tybw-gif.gif);
+  background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 1)),
+    url(images/bleach-tybw-gif.gif);
 }
-
 
 /* Prototype version of what I want to happen, not exactly the end product */
 /* .chapter:hover {
@@ -347,203 +362,202 @@ ul {
 /* Lightswitch styles */
 
 .lightswitch {
-    cursor: pointer;
-    border-style: dotted;
-    border-radius: 45px;
-    padding: 10px;
+  cursor: pointer;
+  border-style: dotted;
+  border-radius: 45px;
+  padding: 10px;
 }
 
 .peko {
-    width: 250px;
-    height: auto;
+  width: 250px;
+  height: auto;
 }
 
 .copyright {
-    font-size: 1em;
+  font-size: 1em;
 }
 
 /* Fake ID selectors, just house color palettes */
 #colors1 {
-    color: #EF7674;
-    color: #EC5766;
-    color: #DA344D;
-    color: #D91E36;
-    color: #C42348;
+  color: #ef7674;
+  color: #ec5766;
+  color: #da344d;
+  color: #d91e36;
+  color: #c42348;
 }
 
 #colors2 {
-    color: #E23E57;
-    color: #88304E;
-    color: #522546;
-    color: #311D3F;
+  color: #e23e57;
+  color: #88304e;
+  color: #522546;
+  color: #311d3f;
 }
 
 /* Palettes from dark mode header image */
 #colors3 {
-    color: #34779B;
-    color: #F1ECE1;
-    color: #DFACC4;
-    color: #AECDED;
-    color: #AC7CB4;
+  color: #34779b;
+  color: #f1ece1;
+  color: #dfacc4;
+  color: #aecded;
+  color: #ac7cb4;
 }
 
 #darkColors {
-    color: #00506F;
-    color: #FF6666;
-    color: #17A7C6;
-    color: #002233;
-    color: #DED687;
+  color: #00506f;
+  color: #ff6666;
+  color: #17a7c6;
+  color: #002233;
+  color: #ded687;
 }
 
 hr {
-    border-top: 2px dotted;
-    border-bottom: none;
+  border-top: 2px dotted;
+  border-bottom: none;
 }
 
 /* Media styles (different viewport sizes styles) */
 @media (max-width: 1024px) {
-    .hamburger {
-        display: block;
-    }
+  .hamburger {
+    display: block;
+  }
 
-    .mobile-only {
-        display: block;
-    }
+  .mobile-only {
+    display: block;
+  }
 
-    .container.no-wrap {
-        display: flex;
-    }
+  .container.no-wrap {
+    display: flex;
+  }
 
-    .cross {
-        display: block;
-    }
+  .cross {
+    display: block;
+  }
 
-    .empty {
-        display: block;
-    }
+  .empty {
+    display: block;
+  }
 
-    .nav-div {
-        padding: 10px;
-        position: absolute;
-        left: -1px;
-        height: 100vh;
-        background-color: #F1ECE1;
-        display: flex;
-        flex-direction: column;
-        justify-content: start;
-        align-items: center;
-        width: 35%;
-        transition: transform 0.5s ease-in;
-        /* Moves the links to the desired position (positive values = moves right, negative values = moves left) */
-        transform: translateX(-100%);
-        /* border-style: none; */
-        border-radius: 0;
-        z-index:999;
-    }
+  .nav-div {
+    padding: 10px;
+    position: absolute;
+    left: -1px;
+    height: 100vh;
+    background-color: var(--primary-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    width: 35%;
+    transition: transform 0.5s ease-in;
+    /* Moves the links to the desired position (positive values = moves right, negative values = moves left) */
+    transform: translateX(-100%);
+    /* border-style: none; */
+    border-radius: 0;
+    z-index: 999;
+  }
 
-    .menu-title {
-        display: block;
-        font-family: inherit;
-    }
+  .menu-title {
+    display: block;
+    font-family: inherit;
+  }
 
-    .nav-link {
-        opacity: 0;
-    }
+  .nav-link {
+    opacity: 0;
+  }
 
-    .banner {
-        display: none;
-    }
+  .banner {
+    display: none;
+  }
 }
 
 @media (max-width: 768px) {
-    .episode.jjk {
-        background-image: url(images/jjk-s2-gif.webp);
-    }
-    .episode.frieren {
-        background-image: url(images/frieren-gif.gif);
-    }
-    .episode.onk {
-        background-image: url(images/onk-gif.gif);
-    }
-    .episode.op-wano {
-        background-image: url(images/op-wano-gif.gif);
-    }
-    .episode.nier {
-        background-image: url(images/nier-gif.webp);
-    }
-    .episode.bleach {
-        background-image: url(images/bleach-tybw-gif.gif);
-    }
+  .episode.jjk {
+    background-image: url(images/jjk-s2-gif.webp);
+  }
+  .episode.frieren {
+    background-image: url(images/frieren-gif.gif);
+  }
+  .episode.onk {
+    background-image: url(images/onk-gif.gif);
+  }
+  .episode.op-wano {
+    background-image: url(images/op-wano-gif.gif);
+  }
+  .episode.nier {
+    background-image: url(images/nier-gif.webp);
+  }
+  .episode.bleach {
+    background-image: url(images/bleach-tybw-gif.gif);
+  }
 }
 
 @media (max-width: 485px) {
-    .logo-text {
-        font-size: 40px;
-    }
+  .logo-text {
+    font-size: 40px;
+  }
 }
 
 @media (max-width: 430px) {
-    .episode {
-        width: 200px;
-        height: 400px;
-    }
+  .episode {
+    width: 200px;
+    height: 400px;
+  }
 
-    .nav-div {
-        width: 94%;
-    }
+  .nav-div {
+    width: 94%;
+  }
 }
 
 @media (max-width: 400px) {
-    .logo-text {
-        font-size: 30px;
-    }
+  .logo-text {
+    font-size: 30px;
+  }
 }
 
 @media (max-width: 320px) {
-    .logo-text {
-        font-size: 0.5em;
-    }
-    .nav-div {
-        width: 92%;
-    }
+  .logo-text {
+    font-size: 0.5em;
+  }
+  .nav-div {
+    width: 92%;
+  }
 }
 
 /* For even smaller screens (ex. Galaxy Fold) */
 @media (max-width: 280px) {
-    .logo-text {
-        font-size: 20px;
-    }
+  .logo-text {
+    font-size: 20px;
+  }
 }
 
 /* Hamburger animation (toggled using JS) */
 .toggle .line1 {
-    transform: rotate(-45deg) translate(-5px,6px);
+  transform: rotate(-45deg) translate(-5px, 6px);
 }
 
 .toggle .line2 {
-    opacity: 0;
+  opacity: 0;
 }
 
 .toggle .line3 {
-    transform: rotate(45deg) translate(-5px,-6px);
+  transform: rotate(45deg) translate(-5px, -6px);
 }
 
 .cross .line1 {
-    transform: rotate(-45deg) translate(-5px,6px);
+  transform: rotate(-45deg) translate(-5px, 6px);
 }
 
 .cross .line2 {
-    opacity: 0;
+  opacity: 0;
 }
 
 .cross .line3 {
-    transform: rotate(45deg) translate(-5px,-6px);
+  transform: rotate(45deg) translate(-5px, -6px);
 }
 
-
 .nav-active {
-    transform: translateX(0%);
-    overflow-y: hidden;
+  transform: translateX(0%);
+  overflow-y: hidden;
 }
 
 /* .nav-darken {
@@ -552,47 +566,47 @@ hr {
 
 /* Link animation */
 @keyframes navLinkFade {
-    from {
-        opacity: 0;
-        transform: translateX(-50px);
-    }
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
 
-    to {
-        opacity: 1;
-        transform: translateX(0px);
-    }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
 }
 
 /* Specific styles, if needed */
 .xtra-padding {
-    padding: 20px;
+  padding: 20px;
 }
 
 .xtra-gap {
-    gap: 70px;
+  gap: 70px;
 }
 
 .no-wrap {
-    flex-wrap: nowrap;
+  flex-wrap: nowrap;
 }
 
 .flexible {
-    width: 100%;
-    height: auto;
+  width: 100%;
+  height: auto;
 }
 
 .column {
-    flex-direction: column;
+  flex-direction: column;
 }
 
 /* Animations that play when an element is in the viewport */
 /* [data-inviewport] {
     width:100px; height:600px;
 } */
-[data-inviewport='scale-in'] {
-    transform: scale(0.3);
+[data-inviewport="scale-in"] {
+  transform: scale(0.3);
 }
 
-[data-inviewport='scale-in'].is-inViewport {
-    transform: scale(1);
+[data-inviewport="scale-in"].is-inViewport {
+  transform: scale(1);
 }
