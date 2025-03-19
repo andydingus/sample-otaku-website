@@ -209,20 +209,36 @@ function setTrendingEpisodeStyles(episode) {
     }
 }
 
+
 function resetTrendingEpisodeStyles(episode) {
-    // Additional logic for trending episodes' mouseout event
-    if (episode.classList.contains('jjk')) {
-        episode.removeChild(jjkLogo);
-    } else if (episode.classList.contains('frieren')) {
-        episode.removeChild(frierenLogo);
-    } else if (episode.classList.contains('onk')) {
-        episode.removeChild(onkLogo);
-    } else if (episode.classList.contains('op-wano')) {
-        episode.removeChild(opLogo);
-    } else if (episode.classList.contains('nier')) {
-        episode.removeChild(nierLogo);
-    } else {
-        episode.removeChild(bleachLogo);
+    // // Additional logic for trending episodes' mouseout event
+    // if (episode.classList.contains('jjk')) {
+    //     episode.removeChild(jjkLogo);
+    // } else if (episode.classList.contains('frieren')) {
+    //     episode.removeChild(frierenLogo);
+    // } else if (episode.classList.contains('onk')) {
+    //     episode.removeChild(onkLogo);
+    // } else if (episode.classList.contains('op-wano')) {
+    //     episode.removeChild(opLogo);
+    // } else if (episode.classList.contains('nier')) {
+    //     episode.removeChild(nierLogo);
+    // } else {
+    //     episode.removeChild(bleachLogo);
+    // }
+
+    const logoMap = {
+        'jjk': jjkLogo,
+        'frieren' : frierenLogo,
+        'onk' : onkLogo,
+        'op-wano': opLogo,
+        'nier' : nierLogo
+    };
+
+    for (const key in logoMap) {
+        if (episode.classList.contains(key)) {
+            episode.removeChild(logoMap[key]);
+            return;
+        }
     }
 }
 
